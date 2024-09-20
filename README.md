@@ -14,11 +14,7 @@ FarmPet utilizes a straightforward mechanism that allows the robot to hover over
 
 The software algorithms allow the robot to move at a constant velocity along circular or straight-line paths by dynamically adjusting the cable lengths in coordination. The robot is designed to perform various agricultural tasks, including pesticide and insecticide application, seed spreading, field surveillance, and land mapping, all while avoiding contact with crops and minimizing disturbance to sensitive plants. Practical testing of the model demonstrated successful performance, with efficient calculations and functional algorithms.
 
-## Introduction
-[Add your introduction content here, detailing the background of the project, significance, and objectives.]
-
 ## Video Demonstration
-[![Watch the video](https://img.youtube.com/vi/ES8Zl3j1rvY/0.jpg)](https://www.youtube.com/watch?v=ES8Zl3j1rvY)
-```
+[Watch the demonstration video on YouTube](https://www.youtube.com/watch?v=ES8Zl3j1rvY)
 
 Feel free to fill in the introduction section and customize any other parts as needed!
