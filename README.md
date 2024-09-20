@@ -5,7 +5,7 @@ Here’s the updated README format with the YouTube video box included:
 # Design and Inverse Kinematics Analysis of Cable-Suspended Parallel Robot ‘FarmPet’ for Agricultural Applications
 
 Authors: Sameerjeet Singh Chhabra, Dr. Shubhrata Nagpal  
-DOI Link: [https://doi.org/10.22214/ijraset.2023.48965](https://doi.org/10.22214/ijraset.2023.48965)  
+DOI Link: https://doi.org/10.22214/ijraset.2023.48965 
 
 ## Abstract
 Farming plays a crucial role in our economy, yet traditional methods often fail to meet the demands of modern agriculture. There is a pressing need for efficient technological advancements that are smart, cost-effective, durable, and capable of significantly increasing crop yield. This need inspired the development of a cable-suspended farming robot, dubbed "FarmPet." 
