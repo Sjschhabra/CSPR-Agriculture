@@ -1,0 +1,102 @@
+#include <AccelStepper.h>
+
+unsigned int xArray[] ={0, 6000, 0};
+unsigned int xSpeeds[] ={0, 400, 300};
+
+unsigned int yArray[] = {0, 5000, 0};
+unsigned int ySpeeds[] = {0, 300, 400};
+
+unsigned int zArray[] = {0, 2000, 0};
+unsigned int zSpeeds[] ={0, 200, 300 };
+
+unsigned int aArray[] ={0, 4000, 0} ;
+unsigned int aSpeeds[] = {0, 100, 200};
+
+
+const byte enablePin = 8;
+
+
+AccelStepper x_stepper(AccelStepper::DRIVER, 2, 5) ;
+
+AccelStepper y_stepper(AccelStepper::DRIVER, 3, 6) ;
+
+AccelStepper z_stepper(AccelStepper::DRIVER, 4, 7) ;
+
+AccelStepper a_stepper(AccelStepper::DRIVER, 12, 13) ;
+
+void setup()
+{
+   Serial.begin(115200);
+   pinMode(enablePin, OUTPUT);
+   digitalWrite(enablePin, LOW);
+   
+   x_stepper.setAcceleration(4000);
+   x_stepper.setMaxSpeed(2000);
+   x_stepper.setSpeed(2000);
+   x_stepper.setCurrentPosition(0);
+
+   
+   y_stepper.setAcceleration(4000);
+   y_stepper.setMaxSpeed(2000);
+   y_stepper.setSpeed(2000); 
+   y_stepper.setCurrentPosition(0);
+   
+   z_stepper.setAcceleration(4000);
+   z_stepper.setMaxSpeed(2000);
+   z_stepper.setSpeed(2000);
+   z_stepper.setCurrentPosition(0);
+   
+   a_stepper.setAcceleration(4000);
+   a_stepper.setMaxSpeed(2000);
+   a_stepper.setSpeed(2000);
+   a_stepper.setCurrentPosition(0);
+}
+
+void loop()
+{
+   static unsigned int index = 0;
+
+   
+   if (x_stepper.run() == 0)
+   {
+      delay(0);
+      Serial.println(index);
+      x_stepper.moveTo(xArray[index]);
+      x_stepper.setMaxSpeed(xSpeeds[index]);
+      }
+
+
+
+ if (y_stepper.run() == 0)
+   {
+      delay(0);
+      Serial.println(index);
+      y_stepper.moveTo(yArray[index]);
+      y_stepper.setMaxSpeed(ySpeeds[index]);
+      }
+
+
+
+
+ if (z_stepper.run() == 0)
+   {
+      delay(0);
+      Serial.println(index);
+      z_stepper.moveTo(zArray[index]);
+      z_stepper.setMaxSpeed(zSpeeds[index]);
+      }
+
+
+
+
+
+  if (a_stepper.run() == 0)
+   {
+      delay(0);
+      Serial.println(index);
+      a_stepper.moveTo(aArray[index]);
+      a_stepper.setMaxSpeed(aSpeeds[index]);
+      }
+      index++;
+      
+   }
